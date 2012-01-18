@@ -1,0 +1,21 @@
+2012-01-18 20:33:16 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'findAll' at line 1
+#0 C:\xampp\htdocs\miblog\lib\Cake\Model\Datasource\DboSource.php(436): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\miblog\lib\Cake\Model\Datasource\DboSource.php(403): DboSource->_execute('findAll', Array)
+#2 C:\xampp\htdocs\miblog\lib\Cake\Model\Datasource\DboSource.php(647): DboSource->execute('findAll', Array, Array)
+#3 C:\xampp\htdocs\miblog\lib\Cake\Model\Datasource\DboSource.php(589): DboSource->fetchAll('findAll', Array, Array)
+#4 C:\xampp\htdocs\miblog\lib\Cake\Model\Model.php(720): DboSource->query('findAll', Array, Object(Post))
+#5 C:\xampp\htdocs\miblog\app\Controller\posts_controller.php(6): Model->__call('findAll', Array)
+#6 C:\xampp\htdocs\miblog\app\Controller\posts_controller.php(6): Post->findAll()
+#7 [internal function]: PostsController->index()
+#8 C:\xampp\htdocs\miblog\lib\Cake\Controller\Controller.php(473): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#9 C:\xampp\htdocs\miblog\lib\Cake\Routing\Dispatcher.php(104): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\htdocs\miblog\lib\Cake\Routing\Dispatcher.php(86): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest), Object(CakeResponse))
+#11 C:\xampp\htdocs\miblog\app\webroot\index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2012-01-18 20:33:56 Error: [MissingViewException] View file "C:\xampp\htdocs\miblog\app\View\Posts\index.ctp" is missing.
+#0 C:\xampp\htdocs\miblog\lib\Cake\View\View.php(360): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\miblog\lib\Cake\Controller\Controller.php(900): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\miblog\lib\Cake\Routing\Dispatcher.php(111): Controller->render()
+#3 C:\xampp\htdocs\miblog\lib\Cake\Routing\Dispatcher.php(86): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest), Object(CakeResponse))
+#4 C:\xampp\htdocs\miblog\app\webroot\index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
